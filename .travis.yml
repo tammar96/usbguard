@@ -30,9 +30,9 @@ matrix:
       compiler: clang
       addons:
         apt:
-          sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-precise-3.8']
-          packages: ['clang-3.8']
-      env: COMPILER_CXX=clang++-3.8 COMPILER_C=clang-3.8
+          sources: ['ubuntu-toolchain-r-test', 'llvm-toolchain-bionic-6.0']
+          packages: ['clang-6.0']
+      env: COMPILER_CXX=clang++-6.0 COMPILER_C=clang-6.0
     - os: linux
       compiler: gcc
       env: COVERAGE=yes CONFIGURE_ARGS="--enable-coverage --disable-shared" USBGUARD_TESTS_VALGRIND=off
