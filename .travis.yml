@@ -6,7 +6,7 @@ compiler:
 - clang
 - gcc
 os: linux
-dist: trusty
+dist: bionic
 sudo: required
 matrix:
   include:
@@ -15,15 +15,17 @@ matrix:
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test']
-          packages: ['g++-5', 'gcc-5']
-      env: COMPILER_CXX=g++-5 COMPILER_C=gcc-5
+          packages: ['g++-8', 'gcc-8']
+      env: COMPILER_CXX=g++-8 COMPILER_C=gcc-8
+
     - os: linux
       compiler: gcc
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test']
-          packages: ['g++-6', 'gcc-6']
-      env: COMPILER_CXX=g++-6 COMPILER_C=gcc-6
+          packages: ['g++-9', 'gcc-9']
+      env: COMPILER_CXX=g++-9 COMPILER_C=gcc-9
+
     - os: linux
       compiler: clang
       addons:
@@ -48,8 +50,8 @@ matrix:
       addons:
         apt:
           sources: ['ubuntu-toolchain-r-test']
-          packages: ['g++-6', 'gcc-6']
-      env: COMPILER_CXX=g++-6 COMPILER_C=gcc-6 CONFIGURE_ARGS=--enable-asan USBGUARD_TESTS_VALGRIND=off
+          packages: ['g++-8', 'gcc-8']
+      env: COMPILER_CXX=g++-8 COMPILER_C=gcc-8 CONFIGURE_ARGS=--enable-asan USBGUARD_TESTS_VALGRIND=off
     - os: linux
       compiler: gcc
       env: CONFIGURE_ARGS=--enable-debug-build
