@@ -1,4 +1,5 @@
 env:
+  -XML_CATALOG_FILES="/usr/local/etc/xml/catalog"
   global:
   - secure: "mAKqsfksFjBmvtjVEUiUkJ1rG7pp4dGZrTez2SRoEu+bEDh620O931SwBYyWMAdKRNGt9zrV22EASXM9ug1AHboFTOnMM17YCLw/nbioV92EIYV7O+infO9dkGpn0wDVa/jPIiJB++5xeeIF8Lgq7td6wP4jE8WMl97PL5wtEMs="
 language: cpp
